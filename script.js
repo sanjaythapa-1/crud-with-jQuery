@@ -36,10 +36,26 @@ function fetchData() {
       html += `<tr>
         <td>${sno}</td>
         <td>${arr[i]}</td>
+        <td> <a href="javascript:void(0)" onclick="deleteData(${i})">Delete</a> </td>
       </tr>`;
       sno++;
     }
 
     $("#user").html(html);
   }
+}
+function deleteData(recordData) {
+  let arr = getCrudData();
+  arr.splice(recordData, 1);
+  setCrudData(arr);
+  fetchData();
+}
+
+function getCrudData() {
+  let arr = JSON.parse(localStorage.getItem("crud"));
+  return arr;
+}
+
+function setCrudData(arr) {
+  localStorage.setItem("crud", JSON.stringify(arr));
 }
