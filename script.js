@@ -36,6 +36,8 @@ function fetchData() {
       html += `<tr>
         <td>${sno}</td>
         <td>${arr[i]}</td>
+         <a href="javascript:void(0)" onclick="editData(${i})">Edit</a>
+          &nbsp;
         <td> <a href="javascript:void(0)" onclick="deleteData(${i})">Delete</a> </td>
       </tr>`;
       sno++;
@@ -50,7 +52,11 @@ function deleteData(recordData) {
   setCrudData(arr);
   fetchData();
 }
-
+function editData(recordData) {
+  id = recordData;
+  let arr = getCrudData();
+  $("#name").val(arr[recordData]);
+}
 function getCrudData() {
   let arr = JSON.parse(localStorage.getItem("crud"));
   return arr;
