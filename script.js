@@ -39,13 +39,7 @@ function fetchData() {
     let sno = 1;
 
     for (let i in arr) {
-      html += `<tr>
-        <td>${sno}</td>
-        <td>${arr[i]}</td>
-         <a href="javascript:void(0)" onclick="editData(${i})">Edit</a>
-          &nbsp;
-        <td> <a href="javascript:void(0)" onclick="deleteData(${i})">Delete</a> </td>
-      </tr>`;
+      html += `<tr><td>${sno}</td><td>${arr[i]}</td><td><a href ="javascript:void(0)" onclick ="editData(${i})">Edit</a>&nbsp;<a href ="javascript:void(0)" onclick ="deleteData(${i})">Delete</a></td></tr>`;
       sno++;
     }
 
