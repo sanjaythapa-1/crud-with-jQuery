@@ -1,4 +1,4 @@
-let id = "";
+let id = "no";
 // localStorage.clear();
 fetchData();
 
@@ -22,7 +22,13 @@ function handleData() {
 
       $("#msg").html("Data inserted");
     } else {
+      let arr = getCrudData();
+      arr[id] = name;
+      setCrudData(arr);
+      $("#msg").html("Data updated");
     }
+    $("#name").val("");
+    fetchData();
   }
 }
 function fetchData() {
