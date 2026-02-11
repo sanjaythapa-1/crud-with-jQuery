@@ -11,8 +11,71 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 30px;
 }
 a {
   text-decoration: none;
+}
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+}
+form input[type="text"] {
+  padding: 10px;
+  width: 220px;
+  border: 1px solid grey;
+  border-radius: 6px;
+}
+form input[type="text"]:focus {
+  border-color: greenyellow;
+}
+form input[type="button"] {
+  padding: 10px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2cbd31;
+  color: white;
+  cursor: pointer;
+}
+form input[type="button"]:hover {
+  background-color: #43a047;
+}
+#msg {
+  color: rgb(31, 31, 123);
+  margin-bottom: 15px;
+}
+h2 {
+  margin: 20px 0 20px;
+}
+table {
+  width: 400px;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.table-container {
+  max-height: 300px;
+  margin-top: 10px;
+}
+thead {
+  background-color: #2cbd31;
+  color: white;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+tbody tr:nth-child(even) {
+  background-color: white;
+}
+button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
